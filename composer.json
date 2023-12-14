@@ -1,12 +1,15 @@
 {
-  "name": "stopka/openvidu-php-client",
+  "name": "jmarqueg84/openvidu-php-client",
   "type": "library",
   "description": "Php client for openvidu server",
-  "homepage": "https://github.com/Stopka/openvidu-php-client",
+  "homepage": "https://github.com/jmarquez84/openvidu-php-client",
   "license": ["MIT"],
   "authors": [
     {
       "name": "Štěpán Škorpil"
+    },
+    {
+      "name": "José Jorge Márquez Gómez"
     }
   ],
   "require": {

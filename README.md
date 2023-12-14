@@ -5,7 +5,7 @@ Php port of [openvidu-java-client](https://github.com/OpenVidu/openvidu/tree/mas
 Installation via Composer.
 
 ```sh
-composer require stopka/openvidu-php-client "dev-master@dev" 
+composer require jmarquez84/openvidu-php-client "dev-master@dev" 
 ```
 
 ## Usage examples
