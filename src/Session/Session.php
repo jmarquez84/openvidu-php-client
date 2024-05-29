@@ -267,6 +267,7 @@ class Session
             $this->createdAt = $this->createdAt->setTimestamp($data['createdAt']);
         }
         $this->recording = (bool)$data['recording'];
+        $data['defaultOutputMode'] = (isset($data['defaultOutputMode']) ? RecordingOutputModeEnum::COMPOSED : $data['defaultOutputMode']);
         $builder = new SessionPropertiesBuilder();
         $builder->setMediaMode(new MediaModeEnum($data['mediaMode']))
             ->setRecordingMode(new RecordingModeEnum($data['recordingMode']))
