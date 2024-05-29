@@ -78,7 +78,7 @@ class RecordingProperties
     /**
      * @return string
      */
-    public function getCustomLayout(): string
+    public function getCustomLayout(): ?string
     {
         return $this->customLayout;
     }
