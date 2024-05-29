@@ -267,13 +267,12 @@ class Session
             $this->createdAt = $this->createdAt->setTimestamp($data['createdAt']);
         }
         $this->recording = (bool)$data['recording'];
-        $data['defaultOutputMode'] = (isset($data['defaultOutputMode']) ? RecordingOutputModeEnum::COMPOSED : $data['defaultOutputMode']);
         $builder = new SessionPropertiesBuilder();
         $builder->setMediaMode(new MediaModeEnum($data['mediaMode']))
             ->setRecordingMode(new RecordingModeEnum($data['recordingMode']))
-            ->setDefaultOutputMode(new RecordingOutputModeEnum($data['defaultOutputMode']));
-        if (isset($data['defaultRecordingLayout'])) {
-            $builder->setDefaultRecordingLayout(new RecordingLayoutEnum($data['defaultRecordingLayout']));
+            ->setDefaultOutputMode(new RecordingOutputModeEnum($data["defaultRecordingProperties"]['outputMode']));
+        if (isset($data["defaultRecordingProperties"]['recordingLayout'])) {
+            $builder->setDefaultRecordingLayout(new RecordingLayoutEnum($data["defaultRecordingProperties"]['recordingLayout']));
         }
         if (isset($data['defaultCustomLayout'])) {
             $builder->setDefaultCustomLayout($data['defaultCustomLayout']);
